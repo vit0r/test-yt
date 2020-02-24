@@ -3,7 +3,12 @@ import PlayListItem from './PlayListItem';
 
 const PlayList = ({playlist , handleVideoRemove, handleVideoSelectPlay}) => {
     const renderedVideos =  playlist.map((video) => {
-        return <PlayListItem key={video.id.videoId} video={video} handleVideoRemove={handleVideoRemove} handleVideoSelectPlay={handleVideoSelectPlay} />
+        return <PlayListItem 
+            key={video.id.videoId} 
+            video={video} 
+            handleVideoRemove={handleVideoRemove} 
+            handleVideoSelectPlay={handleVideoSelectPlay}
+        />
     });
 
     return <div className='ui relaxed divided list'>{renderedVideos}</div>;
