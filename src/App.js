@@ -1,44 +1,85 @@
 import React from 'react';
 import SearchBar from './components/Searchbar';
 import VideoList from './components/VideoList';
-import VideoDetail from './components/VideoDetail';
+import PlayList from './components/PlayList';
 import axios from 'axios';
 
-const axiosRequest = axios.create({baseURL: 'https://www.googleapis.com/youtube/v3/'})
+const axiosRequestYoutube = axios.create({ baseURL: 'https://www.googleapis.com/youtube/v3/' });
+const axiosRequestPLayList = axios.create({ baseURL: 'http://localhost:3001/' });
 
 class App extends React.Component {
+
     state = {
         videos: [],
+        playlist: [],
         selectedVideo: null
-    }
+    };
+
+    componentDidMount() {
+        this.handlePlayList();
+    };
+
     handleSubmit = async (termFromSearchBar) => {
-        const response = await axiosRequest.get('/search', {
+        const response = await axiosRequestYoutube.get('/search', {
             params: {
                 q: termFromSearchBar,
                 part: 'snippet',
                 maxResults: 5,
                 key: 'AIzaSyDJl9d4GxpXCq9Z2uUrV1XoA8hsaPtiJXU'
             }
-        })
+        });
         this.setState({
             videos: response.data.items
-        })
+        });
     };
-    handleVideoSelect = (video) => {
-        this.setState({selectedVideo: video})
+
+    handleVideoSelect = async (video) => {
+        video.videoIdDb = video.id.videoId;
+        const response = await axiosRequestPLayList.post('/playlist', video);
+        if (response.status === 201) {
+            this.setState({ selectedVideo: video });
+            this.handlePlayList();
+        }
+    };
+
+    handleVideoRemove = async (video) => {
+        const response = await axiosRequestPLayList.delete(`/playlist/${video.videoIdDb}`);
+        if (response.status === 200) {
+            this.setState({ selectedVideo: video });
+            this.handlePlayList()
+        }
+    };
+
+    handlePlayList = async () => {
+        const response = await axiosRequestPLayList.get('/playlist');
+        console.log(response)
+        if (response.status === 200) {
+            this.setState({
+                playlist: response.data
+            });
+        }
     }
 
     render() {
         return (
-            <div className='ui container' style={{marginTop: '1em'}}>
-                <SearchBar handleFormSubmit={this.handleSubmit}/>
-                <div className='ui grid'>
-                    <div className="ui row">
-                        <div className="eleven wide column">
-                            <VideoDetail video={this.state.selectedVideo}/>
+            <div className='ui container' style={{ marginTop: '1em' }}>
+                <div className='ui container' style={{ float: "right", marginTop: '1em' }}>
+                    <h1>PlayList</h1>
+                    <div className='ui grid'>
+                        <div className="ui row">
+                            <div className="five wide column">
+                                <PlayList handleVideoRemove={this.handleVideoRemove} playlist={this.state.playlist} />
+                            </div>
                         </div>
-                        <div className="five wide column">
-                            <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
+                    </div>
+                </div>
+                <div className='ui container' style={{ float: "left", marginTop: '1em' }}>
+                    <SearchBar handleFormSubmit={this.handleSubmit} />
+                    <div className='ui grid'>
+                        <div className="ui row">
+                            <div className="five wide column">
+                                <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos} />
+                            </div>
                         </div>
                     </div>
                 </div>

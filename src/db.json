@@ -1,0 +1,134 @@
+{
+  "playlist": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/CK9KSwhr6tSkNEd3H5Z0wYHZ2Fc\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YKrUICOZT-8"
+      },
+      "snippet": {
+        "publishedAt": "2012-01-24T18:18:43.000Z",
+        "channelId": "UCELqfthdDi9atmA_dRlpgPw",
+        "title": "Swallow The Sun - Descending Winters",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YKrUICOZT-8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YKrUICOZT-8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YKrUICOZT-8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Alexandr Tau",
+        "liveBroadcastContent": "none"
+      },
+      "videoIdDb": "YKrUICOZT-8"
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/UwDs9a76bbf8YFlIbtHmiseoZ1Q\"",
+      "id": {
+        "kind": "youtube#channel",
+        "channelId": "UCNCVus37D-NmMC3_fFJlzRQ"
+      },
+      "snippet": {
+        "publishedAt": "2011-05-18T19:40:40.000Z",
+        "channelId": "UCNCVus37D-NmMC3_fFJlzRQ",
+        "title": "Kubbi",
+        "description": "I make music on Renoise. Then I post it on the internet.",
+        "thumbnails": {
+          "default": {
+            "url": "https://yt3.ggpht.com/-RwV65xP9WY8/AAAAAAAAAAI/AAAAAAAAAAA/e5E1UW_JHwg/s88-c-k-no-mo-rj-c0xffffff/photo.jpg"
+          },
+          "medium": {
+            "url": "https://yt3.ggpht.com/-RwV65xP9WY8/AAAAAAAAAAI/AAAAAAAAAAA/e5E1UW_JHwg/s240-c-k-no-mo-rj-c0xffffff/photo.jpg"
+          },
+          "high": {
+            "url": "https://yt3.ggpht.com/-RwV65xP9WY8/AAAAAAAAAAI/AAAAAAAAAAA/e5E1UW_JHwg/s800-c-k-no-mo-rj-c0xffffff/photo.jpg"
+          }
+        },
+        "channelTitle": "Kubbi",
+        "liveBroadcastContent": "none"
+      },
+      "videoIdDb": "NWbopYh"
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/4fzwZa7wsU7zn28wAs3Qx2nzk-E\"",
+      "id": {
+        "kind": "youtube#playlist",
+        "playlistId": "PLX5_So5n4FY8zDaePEDZckealfQGlM3CW"
+      },
+      "snippet": {
+        "publishedAt": "2012-09-22T04:27:09.000Z",
+        "channelId": "UCsiNSFzM-iRX1ZCB1X48_Lw",
+        "title": "Iron Maiden 100 Greatest Hits!",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dTaD9cd8hvw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dTaD9cd8hvw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dTaD9cd8hvw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Roberto Flores",
+        "liveBroadcastContent": "none"
+      },
+      "videoIdDb": "uzzTRzr"
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/DOjN0edsB_x5dnTSG0JHiZBoKc8\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "82uTuWxTJS4"
+      },
+      "snippet": {
+        "publishedAt": "2020-01-26T17:31:49.000Z",
+        "channelId": "UC0fGycccXWcPvOWgjKPO8dQ",
+        "title": "Iron Maiden - Greatest hits Vol. 1",
+        "description": "01 The number of the beast 00:00 02 The trooper 04:52 03 Be quick or be dead 09:05 04 Aces high 12:27 05 Fear of the dark 16:59 06 Run to the hills 24:13 07.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/82uTuWxTJS4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/82uTuWxTJS4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/82uTuWxTJS4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Jorge Gonzalez",
+        "liveBroadcastContent": "none"
+      },
+      "videoIdDb": "82uTuWxTJS4"
+    }
+  ]
+}
