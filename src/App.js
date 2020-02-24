@@ -85,7 +85,7 @@ class App extends React.Component {
     render() {
         return (
             <div className='ui container' style={{ marginTop: '1em' }}>
-                <div className='ui container' style={{ float: "left", width: "25%", marginTop: '1em' }}>
+                <div className='ui container' style={{ float: "left", width: "30%", marginTop: '1em' }}>
                     <SearchBar handleFormSubmit={this.handleSubmit} />
                     <div className='ui grid'>
                         <div className="ui row">
@@ -98,12 +98,12 @@ class App extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className='ui container' style={{ float: "left", width: "50%", marginTop: '1em' }}>
+                <div className='ui container' style={{ float: "left", width: "40%", marginTop: '1em' }}>
                     <div className="eleven wide column">
                         <VideoDetail video={this.state.selectedVideo} />
                     </div>
                 </div>
-                <div className='ui container' style={{ float: "left", width: "25%", marginTop: '1em' }}>
+                <div className='ui container' style={{ float: "left", width: "30%", marginTop: '1em' }}>
                     <h1>PlayList</h1>
                     <div className='ui grid'>
                         <div className="ui row">
