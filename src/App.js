@@ -54,7 +54,6 @@ class App extends React.Component {
     handleVideoRemove = async (video) => {
         const response = await axiosRequestPLayList.delete(`/playlist/${video.videoIdDb}`);
         if (response.status === 200) {
-            this.setState({ selectedVideo: video });
             this.handlePlayList()
         }
     };
