@@ -2,6 +2,7 @@ import React from 'react';
 import SearchBar from './components/Searchbar';
 import VideoList from './components/VideoList';
 import PlayList from './components/PlayList';
+import VideoDetail from './components/VideoDetail';
 import axios from 'axios';
 
 const axiosRequestYoutube = axios.create({ baseURL: 'https://www.googleapis.com/youtube/v3/' });
@@ -42,6 +43,14 @@ class App extends React.Component {
         }
     };
 
+    handleVideoSelectPlay = async (video) => {
+        video.videoIdDb = video.id.videoId;
+        const response = await axiosRequestPLayList.get(`/playlist/${video.videoIdDb}`);
+        if (response.status === 200) {
+            this.setState({ selectedVideo: video });
+        }
+    };
+
     handleVideoRemove = async (video) => {
         const response = await axiosRequestPLayList.delete(`/playlist/${video.videoIdDb}`);
         if (response.status === 200) {
@@ -62,23 +71,32 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className='ui container' style={{ marginTop: '1em' }}>
-                <div className='ui container' style={{ float: "right", marginTop: '1em' }}>
-                    <h1>PlayList</h1>
-                    <div className='ui grid'>
-                        <div className="ui row">
-                            <div className="five wide column">
-                                <PlayList handleVideoRemove={this.handleVideoRemove} playlist={this.state.playlist} />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='ui container' style={{ float: "left", marginTop: '1em' }}>
+            <div className='ui container' style={{ marginTop: '1em' }}>                
+                <div className='ui container' style={{ float: "left", width:"25%", marginTop: '1em' }}>
                     <SearchBar handleFormSubmit={this.handleSubmit} />
                     <div className='ui grid'>
                         <div className="ui row">
                             <div className="five wide column">
                                 <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='ui container' style={{ float: "left", width:"50%", marginTop: '1em' }}>
+                    <div className="eleven wide column">
+                        <VideoDetail video={this.state.selectedVideo} />
+                    </div>
+                </div>
+                <div className='ui container' style={{ float: "left", width:"25%", marginTop: '1em' }}>
+                    <h1>PlayList</h1>
+                    <div className='ui grid'>
+                        <div className="ui row">
+                            <div className="five wide column">
+                                <PlayList 
+                                    handleVideoRemove={this.handleVideoRemove} 
+                                    handleVideoSelectPlay={this.handleVideoSelectPlay} 
+                                    playlist={this.state.playlist} 
+                                />
                             </div>
                         </div>
                     </div>

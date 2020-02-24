@@ -36,34 +36,6 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/UwDs9a76bbf8YFlIbtHmiseoZ1Q\"",
-      "id": {
-        "kind": "youtube#channel",
-        "channelId": "UCNCVus37D-NmMC3_fFJlzRQ"
-      },
-      "snippet": {
-        "publishedAt": "2011-05-18T19:40:40.000Z",
-        "channelId": "UCNCVus37D-NmMC3_fFJlzRQ",
-        "title": "Kubbi",
-        "description": "I make music on Renoise. Then I post it on the internet.",
-        "thumbnails": {
-          "default": {
-            "url": "https://yt3.ggpht.com/-RwV65xP9WY8/AAAAAAAAAAI/AAAAAAAAAAA/e5E1UW_JHwg/s88-c-k-no-mo-rj-c0xffffff/photo.jpg"
-          },
-          "medium": {
-            "url": "https://yt3.ggpht.com/-RwV65xP9WY8/AAAAAAAAAAI/AAAAAAAAAAA/e5E1UW_JHwg/s240-c-k-no-mo-rj-c0xffffff/photo.jpg"
-          },
-          "high": {
-            "url": "https://yt3.ggpht.com/-RwV65xP9WY8/AAAAAAAAAAI/AAAAAAAAAAA/e5E1UW_JHwg/s800-c-k-no-mo-rj-c0xffffff/photo.jpg"
-          }
-        },
-        "channelTitle": "Kubbi",
-        "liveBroadcastContent": "none"
-      },
-      "videoIdDb": "NWbopYh"
-    },
-    {
-      "kind": "youtube#searchResult",
       "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/4fzwZa7wsU7zn28wAs3Qx2nzk-E\"",
       "id": {
         "kind": "youtube#playlist",
@@ -129,6 +101,74 @@
         "liveBroadcastContent": "none"
       },
       "videoIdDb": "82uTuWxTJS4"
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/NQ6m43ZnflYmcw4oLiuLlNemIuk\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "uUt_JBMocKM"
+      },
+      "snippet": {
+        "publishedAt": "2019-12-10T03:00:05.000Z",
+        "channelId": "UCJToUvYrmkmTCR-bluEaQfA",
+        "title": "BAND-MAID / Blooming",
+        "description": "Welcome home,master & princess” BAND-MAID is an impossibly hard rocking maid band. 12月11日（水）リリース、 3rd Album「CONQUEROR」収録の \"Blooming\" ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/uUt_JBMocKM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/uUt_JBMocKM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/uUt_JBMocKM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "BANDMAID",
+        "liveBroadcastContent": "none"
+      },
+      "videoIdDb": "uUt_JBMocKM"
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/1mRJIAPt9gv-9O1YNKm_p3T3yuA\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "skEkpogsmE0"
+      },
+      "snippet": {
+        "publishedAt": "2020-02-12T11:00:11.000Z",
+        "channelId": "UCJToUvYrmkmTCR-bluEaQfA",
+        "title": "BAND-MAID / The Dragon Cries",
+        "description": "Welcome home,master & princess” BAND-MAID is an impossibly hard rocking maid band. 12月11日（水）リリース、 3rd Album「CONQUEROR」収録の \"The ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/skEkpogsmE0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/skEkpogsmE0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/skEkpogsmE0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "BANDMAID",
+        "liveBroadcastContent": "none"
+      },
+      "videoIdDb": "skEkpogsmE0"
     }
   ]
 }
