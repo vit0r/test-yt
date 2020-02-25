@@ -13,3 +13,7 @@ Open [http://localhost:3001/playlist](http://localhost:3001/playlist) to view it
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### Fonts
+
+1. [modern-react-redux](https://github.com/anarsultani97/modern-react-redux)
