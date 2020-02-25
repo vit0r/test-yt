@@ -1,5 +1,7 @@
-import React from 'react';
-import VideoItem from './VideoItem';
+import React, { Fragment } from 'react'
+import VideoItem from './VideoItem'
+
+import Row from 'react-bootstrap/Row'
 
 const VideoList = ({ videos, handleVideoSelect }) => {
     const renderedVideos = videos.map((video) => {
@@ -8,8 +10,22 @@ const VideoList = ({ videos, handleVideoSelect }) => {
             video={video}
             handleVideoSelect={handleVideoSelect}
         />
-    });
+    })
 
-    return <div className='ui relaxed divided list'>{renderedVideos}</div>;
-};
-export default VideoList;
+    // const testIfVideos = () => {
+    //     if(renderedVideos.length === 0) {
+    //         return <Col sm="12">Os vídeos serão <strong>AQUI</strong> exibidos após a busca</Col>
+    //     } else {
+    //         return renderedVideos
+    //     }
+    // }
+
+    return (
+        <Fragment>
+            <Row>
+                {renderedVideos}
+            </Row>
+        </Fragment>
+    )
+}
+export default VideoList

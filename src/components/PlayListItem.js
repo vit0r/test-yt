@@ -1,21 +1,23 @@
-import React from 'react';
-import '../style/video.css';
+import React, { Fragment } from 'react'
+
+import Button from 'react-bootstrap/Button'
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
+import Image from 'react-bootstrap/Image'
 
 const PlayListItem = ({ video, handleVideoRemove, handleVideoSelectPlay }) => {
     return (
-        <div>
-            <div onClick={() => handleVideoSelectPlay(video)} className=' video-item item'>
-                <img className='ui image' src={video.snippet.thumbnails.medium.url} alt={video.snippet.description} />
-                <div className='content'>
-                    <div className='header'>
-                        {video.snippet.title}
-                    </div>
+        <Fragment>
+            <div className='playlist-item item'>
+                <Image className='playlist-item--image' src={video.snippet.thumbnails.medium.url} alt={video.snippet.description} fluid />
+                <div className='playlist-item--description'>
+                    {video.snippet.title}
                 </div>
+                <ButtonToolbar className='playlist-item--actions'>
+                    <Button onClick={() => handleVideoSelectPlay(video)} className="playlist-item--actions-item playlist-item--actions-play"><i className="fa fa-play"></i></Button>
+                    <Button onClick={() => handleVideoRemove(video)} className="playlist-item--actions-item playlist-item--actions-remove"><i className="fa fa-close"></i></Button>
+                </ButtonToolbar>
             </div>
-            <div>
-                <button onClick={() => handleVideoRemove(video)} className='video-item item'>X</button>
-            </div>
-        </div>
+        </Fragment>
     )
-};
-export default PlayListItem;
+}
+export default PlayListItem

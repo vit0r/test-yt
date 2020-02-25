@@ -1,5 +1,5 @@
-import React from 'react';
-import PlayListItem from './PlayListItem';
+import React from 'react'
+import PlayListItem from './PlayListItem'
 
 const PlayList = ({playlist , handleVideoRemove, handleVideoSelectPlay}) => {
     const renderedVideos =  playlist.map((video) => {
@@ -9,8 +9,8 @@ const PlayList = ({playlist , handleVideoRemove, handleVideoSelectPlay}) => {
             handleVideoRemove={handleVideoRemove} 
             handleVideoSelectPlay={handleVideoSelectPlay}
         />
-    });
+    })
 
-    return <div className='ui relaxed divided list'>{renderedVideos}</div>;
-};
-export default PlayList;
+    return <div>{renderedVideos}</div>
+}
+export default PlayList
